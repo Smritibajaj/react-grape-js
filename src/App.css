@@ -1,38 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+	border: 0;
+}
+html, 
+body, #root, .App {
+    height: 100%;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#customLayoutFrame{
+  margin: auto;
+  height: 100%;
+}
+/* Let's highlight canvas boundaries */
+#grapesJsContainer {
+  border: 3px solid #444;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Reset some default styling */
+.grapesJsContainer-cv-canvas {
+  width: 100%;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.gjs-cv-canvas {
+  min-width: 100%;
+}
+
+.grapesJsBlocks {
+  width: auto;
+  height: auto;
+  min-height: auto;
+}
+.gjs-blocks-c >div{
+    min-height: auto !important;
+    width: auto !important;
+  
+}
+
+.gjs-block-section-button {
+  background-color: red !important;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+.heading{
+  background-color: #4CAF50;
+  color: wheat;
+}
+.city {
+  background-color: tomato;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 10px;
 }
