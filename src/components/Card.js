@@ -1,29 +1,21 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert';
-import htmlContent from '../poc.html';
+import React , { Suspense } from 'react';
+import { withRouter } from 'react-router';
+import withGrapes from '../hoc/withGrapes';
 
-const Card = () => {
-    return (
-        <div>
-          <div dangerouslySetInnerHTML={ {__html: htmlContent} } />
-            <Button>Hello JS</Button>
-            {[
-  'primary',
-  'secondary',
-  'success',
-  'danger',
-  'warning',
-  'info',
-  'light',
-  'dark',
-].map((variant, idx) => (
-  <Alert key={idx} variant={variant}>
-    This is a {variant} alert—check it out!
-  </Alert>
-))} 
-        </div>
-    )
+function Cardn(props) {
+  console.log(props);
+  const path = require(`../layouts/${props.location.search.substring(1)}.html`);
+  const GrapeJsScreen = path ?  withGrapes(path) : withGrapes(<div></div>);
+  return (
+    <div className="App">
+      <Suspense fallback={<div>Loading...</div>}>
+        <section>
+         <GrapeJsScreen />
+        </section>
+      </Suspense>
+    </div>
+  );
 }
 
+const Card = withRouter(Cardn)
 export default Card;
