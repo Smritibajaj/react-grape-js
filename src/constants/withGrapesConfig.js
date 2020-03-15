@@ -3,8 +3,9 @@
 //import gjsForms from 'grapesjs-plugin-forms';
 //import gjsWebpage from 'c:/Users/Simmy.Bajaj/OneDrive - 365shl/Documents/react-website-builder/node_modules/grapesjs-plugin-webpage/src';
 import gjsBootstrap4 from 'grapesjs-blocks-bootstrap4';
+import gjsExport from 'grapesjs-plugin-export';
 
-const pluginName = [gjsBootstrap4]
+const pluginName = [ gjsExport, gjsBootstrap4 ]
 
 const config = {
   container: '#gjs',
@@ -14,8 +15,24 @@ const config = {
     appendTo: '#blocks'
   },
   panels: {
-    appendTo: '#panels',
-    defaults: []
+    defaults: [{
+      id: 'commands',
+      el: '#panels',
+      buttons: [
+          { id: 'select', className: 'fa fa-mouse-pointer', command: 'sw-visibility', active: true, context: 'core:component-select', attributes: { title: 'Select element' } },
+          { id: 'undo', className: 'fa fa-undo icon-undo', command: 'core:undo', attributes: { title: 'Undo (CTRL/CMD + Z)' }, },
+          { id: 'redo', className: 'fa fa-repeat icon-redo', command: 'core:redo', attributes: { title: 'Redo (CTRL/CMD + SHIFT + Z)' }, },
+          { id: 'clean-all', className: 'fa fa-trash icon-blank', command: 'core:canvas-clear', attributes: { title: 'Empty canvas' }, },
+          { id: 'clean-all', className: 'fa fa-remove', command: 'core:component-delete', attributes: { title: 'Delete Component' }, },
+          { id: 'resize', className: 'fa fa-arrows-alt', command: 'fullscreen', attributes: { title: 'Resize' }, },
+          { id: 'resize', className: 'fa fa-picture-o', command: 'core:open-assets', attributes: { title: 'Add Images' }, },
+          { id: 'resize', className: 'fa fa-files-o', command: 'core:copy', attributes: { title: 'Copy' }, },
+          { id: 'resize', className: 'fa fa-clipboard', command: 'core:copy', attributes: { title: 'Paste' }, },
+          { id: 'export', className: 'fa fa-code', command: 'core:open-code', attributes: { title: 'View code' }, },
+          { id: 'export', className: 'fa fa-download', command: 'gjs-export-zip', attributes: { title: 'Download code' }, },
+          { id: 'visibility', className: 'fa fa-eye', command: 'preview', attributes: { title: 'View components' }, },
+      ],
+  }]
   },
   styleManager: {
     appendTo: '#style-manager-container',

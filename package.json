@@ -5,7 +5,6 @@
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
-    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
@@ -35,7 +34,9 @@
     "grapesjs-blocks-basic": "^0.1.8",
     "grapesjs-blocks-bootstrap4": "^0.1.20",
     "grapesjs-navbar": "^0.1.5",
+    "grapesjs-plugin-export": "^1.0.7",
     "grapesjs-plugin-forms": "^1.0.5",
+    "grapesjs-plugin-webpage": "C:\\Users\\Simmy.Bajaj\\OneDrive - 365shl\\Documents\\webpage-plugin\\webpage",
     "html-webpack-plugin": "4.0.0-beta.11",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
@@ -67,8 +68,7 @@
     "webpack": "4.41.5",
     "webpack-dev-server": "3.10.2",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1",
-    "grapesjs-plugin-webpage": "C:\\Users\\Simmy.Bajaj\\OneDrive - 365shl\\Documents\\webpage-plugin\\webpage"
+    "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -146,6 +146,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
     "html-loader": "^0.5.5"
   }
 }
