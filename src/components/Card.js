@@ -3,7 +3,6 @@ import { withRouter } from 'react-router';
 import withGrapes from '../hoc/withGrapes';
 
 function Cardn(props) {
-  console.log(props);
   const path = require(`../layouts/${props.location.search.substring(1)}.html`);
   const GrapeJsScreen = path ?  withGrapes(path) : withGrapes(<div></div>);
   return (

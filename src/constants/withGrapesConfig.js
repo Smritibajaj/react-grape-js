@@ -1,11 +1,11 @@
 //import gjsBasicBlocks from 'grapesjs-blocks-basic';
 //import gjsNavbar from 'grapesjs-navbar';
-//import gjsForms from 'grapesjs-plugin-forms';
-//import gjsWebpage from 'c:/Users/Simmy.Bajaj/OneDrive - 365shl/Documents/react-website-builder/node_modules/grapesjs-plugin-webpage/src';
+import gjsForms from 'grapesjs-plugin-forms';
+import gjsCustom from '../../node_modules/grapesjs-plugin-custom/dist/grapesjs-plugin-custom.min.js'
 import gjsBootstrap4 from 'grapesjs-blocks-bootstrap4';
 import gjsExport from 'grapesjs-plugin-export';
 
-const pluginName = [ gjsExport, gjsBootstrap4 ]
+const pluginName = [ gjsBootstrap4 , gjsExport, gjsCustom ]
 
 const config = {
   container: '#gjs',
